@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import shouldPureComponentUpdate from 'react-pure-render/function';
 
@@ -29,13 +30,13 @@ export const popoverStore = new PopoverStore();
 
 export class Popover extends React.Component {
 	static propTypes = {
-		className: React.PropTypes.string,
-		triggerClassName: React.PropTypes.string,
-		children: React.PropTypes.node,
-		trigger: React.PropTypes.any.isRequired,
-		position: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
-		onShow: React.PropTypes.func,
-		onHide: React.PropTypes.func,
+		className: PropTypes.string,
+		triggerClassName: PropTypes.string,
+		children: PropTypes.node,
+		trigger: PropTypes.any.isRequired,
+		position: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+		onShow: PropTypes.func,
+		onHide: PropTypes.func,
 	};
 
 	static defaultProps = {
@@ -96,7 +97,7 @@ export class Popover extends React.Component {
 
 export class PopoverWrapper extends React.Component {
 	static propTypes = {
-		children: React.PropTypes.node,
+		children: PropTypes.node,
 	};
 
 	hidePopovers() {
